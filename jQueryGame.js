@@ -1,5 +1,5 @@
 $(document).ready(function(e) {
-$("#my_audio").get(0).play();
+// $("#my_audio").get(0).play();
 
     // $(".btn-danger").click(function(e) {
     //     $("#box-wrapper").fadeOut();
@@ -15,7 +15,7 @@ $('#losses').text(losses);
 var userScore= 0;
 
 
-//random game number assigned to round
+
 //function that generates a random number
 
 function randomIntFromInterval(min,max){
@@ -27,9 +27,9 @@ var numRandom = randomIntFromInterval(19,120);
 
 //display random number generated in span with id of value
 
-$('#value').text(numRandom);
+$('.value').text(numRandom);
 console.log(numRandom);
-$('.value').append(numRandom);
+$('#value').append(numRandom);
 
 
 
@@ -65,9 +65,10 @@ return currentValue + scoreValue;
 
 $(".thumbnail").click(function(e) {
 // each time a thumbnail is clicked add values together and display in the '#userScore' span
-	var score= this.value;
+	var score= parseInt(this.value);
+	console.log(score);
 	userScore= addCharactersValue(score, userScore);
-	if (userScore < numRandom) {
+	// if (userScore < numRandom) {
 	$('#userScore').append(userScore)
 // } else if
 // 	} = addCharactersValue(score, userScore);
@@ -76,11 +77,11 @@ $(".thumbnail").click(function(e) {
 
 	// addCharactersValue(score, userScore);//incrementing every time clicked
 // keep the counter active until reach
-};
-
 });
 
 });
+
+
 
 
 
