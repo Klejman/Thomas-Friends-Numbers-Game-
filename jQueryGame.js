@@ -13,7 +13,6 @@ $('#losses').text(losses);
 
 //create game counter aka userScore tracking current game
 var userScore= 0;
-$('#userScore').text(userScore);
 
 
 //random game number assigned to round
@@ -31,6 +30,9 @@ var numRandom = randomIntFromInterval(19,120);
 $('#value').text(numRandom);
 console.log(numRandom);
 $('.value').append(numRandom);
+
+
+
 
 //Goal: randomly assign the buttons aka thumbnails a numerical value 
 //Steps Taken
@@ -56,7 +58,7 @@ console.log($(".thumbnail"))
 setValues();
 
 
-//function that adds the numerical value assigned each button and display to user
+//function that adds the numerical value assigned each button and display to #userScore
 function addCharactersValue(currentValue, scoreValue) {
 return currentValue + scoreValue;
 }
@@ -64,8 +66,18 @@ return currentValue + scoreValue;
 $(".thumbnail").click(function(e) {
 // each time a thumbnail is clicked add values together and display in the '#userScore' span
 	var score= this.value;
-	userScore = addCharactersValue(score, userScore);//incrementing every time clicked
+	userScore= addCharactersValue(score, userScore);
+	if (userScore < numRandom) {
+	$('#userScore').append(userScore)
+// } else if
+// 	} = addCharactersValue(score, userScore);
+
+	
+
+	// addCharactersValue(score, userScore);//incrementing every time clicked
 // keep the counter active until reach
+};
+
 });
 
 });
