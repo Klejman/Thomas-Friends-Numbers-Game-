@@ -1,0 +1,116 @@
+
+html {
+  width: 100%
+  max-width:960px;
+  margin: 0 auto;
+}
+
+body {
+  background-image: url("assets/images/backDrops/transitionScreen.jpg");
+  opacity: 0.85;
+  filter: alpha(opacity= 85); /* For IE8 and earlier */
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Belleza', sans-serif;
+}
+
+.row {
+  margin-bottom: 5px;
+}
+
+#opening-img,
+.btn-danger {
+  margin-top: 10%;
+  background-color: red;
+}
+
+
+#wrapper {
+  top: 100px;
+  right: 50px;
+  position: absolute;
+}
+
+#box-wrapper {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 40px;
+  margin: 0 none;
+  text-shadow:
+  -1px -1px 0 #1296FF,
+  1px -1px 0 #1296FF,
+  -1px 1px 0 #1296FF,
+  1px 1px 0 #1296FF;
+}
+
+
+.instructions {
+  background-color: #EBE6AD;
+}
+
+#heading {
+  font-size: 25px;
+
+  padding-left: 10px;
+  font-weight: bolder;
+  background-color: #EF670B;
+  color: #fff;
+  -1px -1px 0 #000,
+  -1px -1px 0 #000,
+  -1px -1px 0 #000,
+  -1px -1px 0 #000,
+}
+
+#gameTitle {
+  background-color: #931012;
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+p,
+#currentTally {
+  font-size: 16px;
+  font-weight: bold;
+  color: green;
+  -1px -1px 0 #000,
+  -1px -1px 0 #000,
+  -1px -1px 0 #000,
+  -1px -1px 0 #000,
+}
+
+ #last {
+  margin-bottom: 5%;
+ } 
+
+ #numMatchTo {
+  background-color: #33A412;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  padding-top: 0;
+ }
+
+ #currentTally {
+  background-color: #1DC1F3;
+ }
+
+.userScoreTitle,
+#userTotalScore {
+  padding: 0 20px 0 20px;
+  background-color: #1DB1AD;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.thumbnail {
+  max-width: 120px;
+  width: 100%;
+  height: 100%;
+  padding:10px;
+}
+
