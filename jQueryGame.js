@@ -68,8 +68,9 @@ $(".thumbnail").click(function(e) {
 	var score= parseInt(this.value);
 	console.log(score);
 	userScore= addCharactersValue(score, userScore);
+	$('#userScore').text(userScore)
+
 	// if (userScore < numRandom) {
-	$('#userScore').append(userScore)
 // } else if
 // 	} = addCharactersValue(score, userScore);
 
