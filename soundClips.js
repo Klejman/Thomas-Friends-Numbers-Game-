@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-$("#my_audio").get(0).play();//.prop('volume', 0.03);
+//.prop('volume', 0.03);
 
 //sound clips 
 var winSound = new Audio('assets/music/winToot.mp3');
