@@ -1,9 +1,11 @@
 $(document).ready(function(){
 
-    $("#my_audio").get(0).play() //.prop('volume', 0.03);
- //while loop 
-    $(".wrapper").click(function(){
-        $(this).hide() && $("#my_audio").stop();
+$('gamePlayScreen').on()
+$(this).hide();
+
+$(".wrapper").click(function(){
+$(this).hide();
+
 })
 
 //set and track overall points/score
@@ -16,6 +18,7 @@ $('#losses').text(losses);
 //create game counter aka userScore tracking current game
 var userScore= 0;
 
+//game reset
 
 
 //function that generates a random number
@@ -74,11 +77,19 @@ $(".thumbnail").click(function(e) {
     $('#userScore').text(userScore);
 
 
+//check if user score === randomNum
+  if (userScore === numRandom) {
+      wins++;
+    $('#wins').text(wins);
+   $('#userScore').text("You are a very useful engine!");
 
-    
+}
+   if (userScore > numRandom) {
+       losses++;
+    $('#losses').text(losses);  
+    $('#userScore').text("You have caused confusion and delay!");
 
-    // addCharactersValue(score, userScore);//incrementing every time clicked
-// keep the counter active until reach
+ }
 });
 
 });
@@ -88,4 +99,4 @@ $(".thumbnail").click(function(e) {
 
 
 
-
+ 
