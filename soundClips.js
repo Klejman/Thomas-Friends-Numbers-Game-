@@ -3,9 +3,9 @@ $(document).ready(function(){
 $("#my_audio").get(0).play();//.prop('volume', 0.03);
 
 //sound clips 
-var audio = new audio ('assets/music/gameThemeSound.mp3').prop('volume', 0.5);
-var winToot = new audio ('assets/music/winToot.mp3');
-var lossSound = new audio ('assets/music/ohNo.mp3');
+var audio = new Audio('assets/music/gameThemeSound.mp3')
+var winToot = new Audio('assets/music/winToot.mp3');
+var lossSound = new Audio('assets/music/ohNo.mp3');
 
 
 

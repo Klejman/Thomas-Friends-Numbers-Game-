@@ -19,7 +19,11 @@ $('#losses').text(losses);
 var userScore= 0;
 
 //game reset
-
+function reset(){
+  setValues();
+  userScore= 0;
+  $('#userScore').text(userScore);  
+}
 
 //function that generates a random number
 
@@ -48,17 +52,13 @@ $('#value').append(numRandom);
 // 5. query selector thumbnail class and iterate through each thumbnail and assigning it a numerical value
 
 function setValues() {
+function randomNum(index, element){
+console.log(element)
 
-    function randomNum(index, element){
-        console.log(element)
-
-        let rand= Math.ceil(Math.random()* 12);
-
-
-        $(element).val(rand)
+let rand= Math.ceil(Math.random()* 12);
+$(element).val(rand)
     }
-
-    $(".thumbnail").each(randomNum)
+$(".thumbnail").each(randomNum)
 }
 console.log($(".thumbnail"))
 setValues();
@@ -71,25 +71,29 @@ return currentValue + scoreValue;
 
 $(".thumbnail").click(function(e) {
 // each time a thumbnail is clicked add values together and display in the '#userScore' span
-    var score= parseInt(this.value);
-    console.log(score);
-    userScore= addCharactersValue(score, userScore);
-    $('#userScore').text(userScore);
+var score= parseInt(this.value);
+console.log(score);
+userScore= addCharactersValue(score, userScore);
+$('#userScore').text(userScore);
 
 
 //check if user score === randomNum
-  if (userScore === numRandom) {
-      wins++;
-    $('#wins').text(wins);
-   $('#userScore').text("You are a very useful engine!");
-   // $("#my_audio").pause() && $("#my_audio")winToot.play();
+if (userScore === numRandom) {
+wins++;
+$('#wins').text(wins);
+$('#userScore').text("You are a very useful engine!");
+// $("#my_audio").pause() && $("#my_audio")winToot.play();
+reset();
 
 }
-   if (userScore > numRandom) {
-       losses++;
-    $('#losses').text(losses);  
-    $('#userScore').text("You have caused confusion & delay!");
-    // $("#my_audio").pause() && $("#my_audio")lossSound.play();
+
+if (userScore > numRandom) {
+losses++;
+$('#losses').text(losses);  
+$('#userScore').text("You have caused confusion & delay!");
+// $("#my_audio").pause() && $("#my_audio")lossSound.play();
+reset();
+
  }
 });
 
