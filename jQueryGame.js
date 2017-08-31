@@ -82,13 +82,14 @@ $(".thumbnail").click(function(e) {
       wins++;
     $('#wins').text(wins);
    $('#userScore').text("You are a very useful engine!");
+   // $("#my_audio").pause() && $("#my_audio")winToot.play();
 
 }
    if (userScore > numRandom) {
        losses++;
     $('#losses').text(losses);  
-    $('#userScore').text("You have caused confusion and delay!");
-
+    $('#userScore').text("You have caused confusion & delay!");
+    // $("#my_audio").pause() && $("#my_audio")lossSound.play();
  }
 });
 
