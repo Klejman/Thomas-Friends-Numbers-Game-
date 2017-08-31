@@ -34,6 +34,16 @@ body {
   position: absolute;
 }
 
+.gamePlayScreen {
+  visibility; hidden;
+}
+
+
+
+
+
+
+
 #box-wrapper {
   background-color: transparent;
   border: none;

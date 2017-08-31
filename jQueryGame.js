@@ -1,8 +1,10 @@
-$(document).ready(function(e) {
-// $("#my_audio").get(0).play();
+$(document).ready(function(){
 
-    // $(".btn-danger").click(function(e) {
-    //     $("#box-wrapper").fadeOut();
+    $("#my_audio").get(0).play() //.prop('volume', 0.03);
+ //while loop 
+    $(".wrapper").click(function(){
+        $(this).hide() && $("#my_audio").stop();
+})
 
 //set and track overall points/score
 var wins = 0;
@@ -44,15 +46,16 @@ $('#value').append(numRandom);
 
 function setValues() {
 
-	function randomNum(index, element){
-		console.log(element)
+    function randomNum(index, element){
+        console.log(element)
 
-		let rand= Math.ceil(Math.random()* 12);
+        let rand= Math.ceil(Math.random()* 12);
 
-		$(element).val(rand)
-	}
 
-	$(".thumbnail").each(randomNum)
+        $(element).val(rand)
+    }
+
+    $(".thumbnail").each(randomNum)
 }
 console.log($(".thumbnail"))
 setValues();
@@ -65,23 +68,20 @@ return currentValue + scoreValue;
 
 $(".thumbnail").click(function(e) {
 // each time a thumbnail is clicked add values together and display in the '#userScore' span
-	var score= parseInt(this.value);
-	console.log(score);
-	userScore= addCharactersValue(score, userScore);
-	$('#userScore').text(userScore)
+    var score= parseInt(this.value);
+    console.log(score);
+    userScore= addCharactersValue(score, userScore);
+    $('#userScore').text(userScore);
 
-	// if (userScore < numRandom) {
-// } else if
-// 	} = addCharactersValue(score, userScore);
 
-	
 
-	// addCharactersValue(score, userScore);//incrementing every time clicked
+    
+
+    // addCharactersValue(score, userScore);//incrementing every time clicked
 // keep the counter active until reach
 });
 
 });
-
 
 
 
