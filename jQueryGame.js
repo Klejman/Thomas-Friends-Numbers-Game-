@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+  $("#my_audio").get(0).play();
+
+
+
+  
 $('gamePlayScreen').on()
 $(this).hide();
 
@@ -77,12 +82,13 @@ userScore= addCharactersValue(score, userScore);
 $('#userScore').text(userScore);
 
 
+
 //check if user score === randomNum
 if (userScore === numRandom) {
 wins++;
 $('#wins').text(wins);
 $('#userScore').text("You are a very useful engine!");
-// $("#my_audio").pause() && $("#my_audio")winToot.play();
+$("#winSound").get(0).play();
 reset();
 
 }
@@ -91,7 +97,7 @@ if (userScore > numRandom) {
 losses++;
 $('#losses').text(losses);  
 $('#userScore').text("You have caused confusion & delay!");
-// $("#my_audio").pause() && $("#my_audio")lossSound.play();
+$("#lossSound").get(0).play();
 reset();
 
  }
