@@ -27,7 +27,14 @@ var userScore= 0;
 function reset(){
   setValues();
   userScore= 0;
-  $('#userScore').text(userScore);  
+  $('#userScore').text(userScore); 
+  function randomIntFromInterval(min,max){
+  return Math.floor(Math.random()*(max-min+1)+min);
+  }
+  var numRandom = randomIntFromInterval(19,120);
+  $('.value').text(numRandom);
+  console.log(numRandom);
+  $('#value').append(numRandom); 
 }
 
 //function that generates a random number
