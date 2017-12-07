@@ -22,5 +22,3 @@ Application dynamically updates the HTML page using the jQuery library.
 ### Screen Shot
 
 ![](https://user-images.githubusercontent.com/28759418/33719460-cdfe1850-db2e-11e7-985f-a88242d19543.png)
-
-)
