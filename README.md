@@ -1,6 +1,6 @@
 # Number Matching Game
 
-[Thomas & Friends® Number Matching Game](https://klejman.github.io/train-game-week4.0/)
+[Thomas & Friends® Number Matching Game](https://klejman.github.io/Thomas-Friends-Numbers-Game-/)
 
 ## About
 
